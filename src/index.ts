@@ -11,7 +11,7 @@ import {RpsContext,RpsModule,rpsAction} from 'rpscript-interface';
 @RpsModule("open")
 export default class RPSOpen {
 
-  @rpsAction({defaultName:'open'})
+  @rpsAction({verbName:'open'})
   open (ctx:RpsContext,opts:{}, filepath:string) : Promise<ChildProcess|Buffer>{
     if(process.platform === 'linux'){
       let result = this.childProcessOpen(filepath);
