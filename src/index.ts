@@ -1,12 +1,10 @@
-/**
- * @module Notifier
- */
-
 import opn from 'opn';
 import {ChildProcess, execSync} from 'child_process';
 import {RpsContext,RpsModule,rpsAction} from 'rpscript-interface';
 
-
+/** Module for Lodash
+ * @namespace Lodash 
+*/
 
 @RpsModule("open")
 export default class RPSOpen {
