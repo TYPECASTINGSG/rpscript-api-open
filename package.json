@@ -1,6 +1,6 @@
 {
   "name": "@typecasting/rpscript-api-open",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "RPScript API for opening file",
   "keywords": [
     "api",
