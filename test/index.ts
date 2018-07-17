@@ -11,6 +11,9 @@ m.describe('Open', () => {
 
     await open.open(new RpsContext,{},"README.md");
 
+    await open.open(new RpsContext,{},"https://www.google.com.sg");
+    await open.open(new RpsContext,{app:'firefox'},"https://www.google.com.sg");
+
   }).timeout(0);
 
 })
