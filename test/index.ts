@@ -10,9 +10,11 @@ m.describe('Open', () => {
     let open = new RPSOpen;
 
     await open.open(new RpsContext,{},"README.md");
-
+    
     await open.open(new RpsContext,{},"https://www.google.com.sg");
-    await open.open(new RpsContext,{app:'firefox'},"https://www.google.com.sg");
+
+    let firefox:any = await open.open(new RpsContext,{app:'firefox'});
+    firefox("https://www.google.com.sg");
 
   }).timeout(0);
 

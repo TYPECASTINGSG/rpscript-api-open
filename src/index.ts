@@ -1,6 +1,6 @@
 import opn from 'opn';
 import {ChildProcess, execSync} from 'child_process';
-import {RpsContext,RpsModule,rpsAction} from 'rpscript-interface';
+import {RpsContext,RpsModule,rpsAction,R} from 'rpscript-interface';
 
 
 /** Open a file or url in the user's preferred application.
@@ -28,8 +28,13 @@ export default class RPSOpen {
  * 
 */
   @rpsAction({verbName:'open'})
-  open (ctx:RpsContext,opts:Object, filepath:string,preferredApp?:string) : Promise<ChildProcess|Buffer>{
-    return opn(filepath,opts);
+  open (ctx:RpsContext,opts:Object, filepath?:string) : Promise<ChildProcess|Buffer>|Function{
+    if(!filepath){ 
+      return function (filepath) {
+        return opn(filepath,opts);
+      }
+    }
+    else opn(filepath,opts);
   }
 
   private childProcessOpen (filepath:string) :Buffer {
