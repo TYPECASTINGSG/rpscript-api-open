@@ -6,7 +6,7 @@ var deasyncPromise = require('deasync-promise');
 
 /** Open a file or url in the user's preferred application.
  * 
- * @see https://www.npmjs.com/package/opn {@link https://www.npmjs.com/package/opn|Opn}
+ * @see {@link https://www.npmjs.com/package/opn}
  * @namespace Open
  * 
  * @example
@@ -28,7 +28,6 @@ export default class RPSOpen {
  * @param {string} filepath file to open.
  * @param {*} options refer to Opn documentation.
  * @summary open :: String → ChildProcess
- * @description
  * 
 */
   @rpsAction({verbName:'open'})
